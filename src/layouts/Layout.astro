@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>America | Núcleo del Sistema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'dark'; // Default to dark as requested originally
+      })();
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      window.localStorage.setItem('theme', theme);
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white transition-colors duration-300">
+    <!-- Starry Background -->
+    <div class="fixed inset-0 z-[-3] bg-brand-bg transition-colors duration-300"></div>
+    <!-- Invertimos la textura de estrellas en modo claro para que sean estrellas oscuras sobre fondo claro -->
+    <div class="fixed inset-0 z-[-2] opacity-30 dark:opacity-40 invert dark:invert-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] transition-all duration-300"></div>
+    <div class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_rgba(157,78,221,0.25),_transparent_80%)] pointer-events-none"></div>
+    
+    <slot />
+    <script>
+      // Animaciones de scroll (Reveal)
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            } else {
+              // Remover la clase hace que la animación se repita al volver a scrollear
+              entry.target.classList.remove('in-view');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

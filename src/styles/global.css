@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: var(--bg-color);
+  --color-brand-card: var(--card-color);
+  --color-brand-text: var(--text-color);
+  --color-brand-purple: #9d4edd;
+  --color-brand-purple-light: #c77dff;
+  --color-brand-purple-glow: #e0aaff;
+  --font-sans: 'Rajdhani', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-input-focus-bg: var(--input-focus-bg);
+}
+
+:root {
+  --bg-color: #f4ecf9; /* Color morado muy claro, inspirado en la imagen */
+  --card-color: rgba(255, 255, 255, 0.7);
+  --text-color: #1a1a2e;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.5);
+  --input-border: rgba(157, 78, 221, 0.2);
+  --input-focus-bg: rgba(255, 255, 255, 0.8);
+}
+
+html.dark {
+  --bg-color: #090514;
+  --card-color: rgba(20, 10, 40, 0.4);
+  --text-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(0, 0, 0, 0.4);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-focus-bg: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.glass-panel {
+  background: var(--color-brand-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(157, 78, 221, 0.05);
+  border-radius: 1.5rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+  opacity: 0;
+  /* Curva de aceleración estilo sci-fi (rápido al principio, luego suave) */
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+.reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(0.95); }
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
