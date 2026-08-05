@@ -16,7 +16,7 @@ const toolsSkills = [
 ---
 <section id="sobre-mi" class="scroll-mt-32 py-12">
   <div class="mb-10 border-b border-brand-purple/30 pb-4">
-    <h2 class="text-3xl font-bold uppercase tracking-widest text-brand-text flex items-center gap-3">
+    <h2 class="text-3xl font-bold uppercase tracking-widest text-brand-text flex items-center gap-3" data-i18n-es="Datos sobre mí" data-i18n-en="About me">
       <div class="w-2 h-8 bg-brand-purple-glow rounded-full shadow-[0_0_10px_#e0aaff]"></div>
       Datos sobre mí
     </h2>
@@ -35,11 +35,11 @@ const toolsSkills = [
           <span class="text-brand-text/60 font-mono text-sm ml-2">sys_log_visual.exe</span>
         </div>
         <div class="space-y-4 text-brand-text/80 font-medium font-mono leading-relaxed text-sm">
-          <p class="text-brand-purple-light">> Cargando módulo visual...</p>
-          <p>
+          <p class="text-brand-purple-light" data-i18n-es="> Cargando módulo visual..." data-i18n-en="> Loading visual module...">> Cargando módulo visual...</p>
+          <p data-i18n-es="Para mí, el desarrollo web no es solo escribir código: es el arte de combinar creatividad visual con arquitectura sólida. Me destaco por mi capacidad para adaptarme exactamente a lo que cada cliente o proyecto necesita." data-i18n-en="For me, web development is not just writing code: it's the art of combining visual creativity with solid architecture. I excel at adapting exactly to what each client or project needs.">
             Para mí, el desarrollo web no es solo escribir código: es el arte de combinar creatividad visual con arquitectura sólida. Me destaco por mi capacidad para adaptarme exactamente a lo que cada cliente o proyecto necesita.
           </p>
-          <p>
+          <p data-i18n-es="Cuido meticulosamente desde la estética de la interfaz hasta el último detalle de la estructura, creando experiencias verdaderamente memorables." data-i18n-en="I meticulously take care of everything from the interface aesthetics to the last detail of the structure, creating truly memorable experiences.">
             Cuido meticulosamente desde la estética de la interfaz hasta el último detalle de la estructura, creando experiencias verdaderamente memorables.
           </p>
         </div>
@@ -47,7 +47,7 @@ const toolsSkills = [
       <!-- XP Bars -->
       <div class="glass-panel p-8 h-full reveal reveal-right delay-100">
         <h3 class="text-xl font-bold mb-6 text-brand-text uppercase tracking-widest flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-4">
-          Visual XP <span class="text-brand-purple-glow text-xs font-mono">Nivel Frontend</span>
+          Visual XP <span class="text-brand-purple-glow text-xs font-mono" data-i18n-es="Nivel Frontend" data-i18n-en="Frontend Level">Nivel Frontend</span>
         </h3>
         <div class="space-y-6">
           {frontendSkills.map(skill => (
@@ -73,7 +73,7 @@ const toolsSkills = [
       <!-- XP Bars (Left side on desktop to alternate) -->
       <div class="glass-panel p-8 h-full order-2 lg:order-1 reveal reveal-left">
         <h3 class="text-xl font-bold mb-6 text-brand-text uppercase tracking-widest flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-4">
-          Lógica XP <span class="text-brand-purple-glow text-xs font-mono">Nivel Backend</span>
+          Lógica XP <span class="text-brand-purple-glow text-xs font-mono" data-i18n-es="Nivel Backend" data-i18n-en="Backend Level">Nivel Backend</span>
         </h3>
         <div class="space-y-6">
           {backendSkills.map(skill => (
@@ -101,11 +101,11 @@ const toolsSkills = [
           <span class="text-brand-text/60 font-mono text-sm ml-2">sys_log_backend.exe</span>
         </div>
         <div class="space-y-4 text-brand-text/80 font-medium font-mono leading-relaxed text-sm">
-          <p class="text-brand-purple-light">> Cargando módulo lógico...</p>
-          <p>
+          <p class="text-brand-purple-light" data-i18n-es="> Cargando módulo lógico..." data-i18n-en="> Loading logical module...">> Cargando módulo lógico...</p>
+          <p data-i18n-es="Tengo una fijación perfeccionista por la lógica backend y la caza de bugs: si algo se construye, tiene que funcionar de forma impecable, sin fallos y a la primera." data-i18n-en="I have a perfectionist fixation on backend logic and bug hunting: if something is built, it has to work flawlessly, without bugs, and on the first try.">
             Tengo una fijación perfeccionista por la lógica backend y la caza de bugs: si algo se construye, tiene que funcionar de forma impecable, sin fallos y a la primera.
           </p>
-          <p>
+          <p data-i18n-es="Estructurar módulos complejos y manejar bases de datos eficientes es mi terreno. Mi enfoque siempre es crear soluciones limpias, adaptables y sólidas desde su núcleo." data-i18n-en="Structuring complex modules and handling efficient databases is my domain. My focus is always to create clean, adaptable, and solid solutions from their core.">
             Estructurar módulos complejos y manejar bases de datos eficientes es mi terreno. Mi enfoque siempre es crear soluciones limpias, adaptables y sólidas desde su núcleo.
           </p>
         </div>
@@ -123,17 +123,17 @@ const toolsSkills = [
           <span class="text-brand-text/60 font-mono text-sm ml-2">sys_log_workflow.exe</span>
         </div>
         <div class="space-y-4 text-brand-text/80 font-medium font-mono leading-relaxed text-sm">
-          <p class="text-brand-purple-light">> Estableciendo conexión...</p>
-          <p>
+          <p class="text-brand-purple-light" data-i18n-es="> Estableciendo conexión..." data-i18n-en="> Establishing connection...">> Estableciendo conexión...</p>
+          <p data-i18n-es="Un buen código no es nada sin un buen control de versiones. Utilizo herramientas modernas para mantener repositorios limpios y documentados." data-i18n-en="Good code is nothing without good version control. I use modern tools to keep repositories clean and documented.">
             Un buen código no es nada sin un buen control de versiones. Utilizo herramientas modernas para mantener repositorios limpios y documentados.
           </p>
-          <p class="text-brand-purple-light animate-pulse">>_ Listo para nuevos proyectos.</p>
+          <p class="text-brand-purple-light animate-pulse" data-i18n-es=">_ Listo para nuevos proyectos." data-i18n-en=">_ Ready for new projects.">>_ Listo para nuevos proyectos.</p>
         </div>
       </div>
       <!-- XP Bars -->
       <div class="glass-panel p-8 h-full flex flex-col reveal reveal-right delay-100">
         <h3 class="text-xl font-bold mb-6 text-brand-text uppercase tracking-widest flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-4">
-          Herramientas XP <span class="text-brand-purple-glow text-xs font-mono">Control</span>
+          Herramientas XP <span class="text-brand-purple-glow text-xs font-mono" data-i18n-es="Control" data-i18n-en="Control">Control</span>
         </h3>
         <div class="space-y-6 flex-grow">
           {toolsSkills.map(skill => (
@@ -153,7 +153,7 @@ const toolsSkills = [
         </div>
         <div class="mt-8 p-4 rounded-xl border border-brand-purple/30 bg-brand-purple/5 dark:bg-brand-purple/10 flex items-center justify-between group cursor-pointer hover:bg-brand-purple/10 dark:hover:bg-brand-purple/20 transition-colors">
            <div>
-             <p class="text-brand-text font-bold tracking-wider uppercase text-sm">Repositorio Base</p>
+             <p class="text-brand-text font-bold tracking-wider uppercase text-sm" data-i18n-es="Repositorio Base" data-i18n-en="Base Repository">Repositorio Base</p>
              <p class="text-brand-text/60 text-xs font-mono">github.com/Aerm0406</p>
            </div>
            <a href="https://github.com/Aerm0406" target="_blank" class="w-10 h-10 rounded-full bg-brand-purple/10 dark:bg-brand-purple/20 flex items-center justify-center text-brand-purple-glow group-hover:bg-brand-purple group-hover:text-white transition-all shadow-[0_0_10px_rgba(157,78,221,0.2)] dark:shadow-[0_0_10px_rgba(157,78,221,0.4)] group-hover:shadow-[0_0_20px_rgba(157,78,221,0.8)]">
