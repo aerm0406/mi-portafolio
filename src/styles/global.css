@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --color-brand-bg: var(--bg-color);
   --color-brand-card: var(--card-color);
